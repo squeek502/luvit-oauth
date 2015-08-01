@@ -1,4 +1,4 @@
 return {
-	OAuth = require('./src/oauth'),
-	OAuth2 = require('./src/oauth2')
+	OAuth = require('./libs/oauth'),
+	OAuth2 = require('./libs/oauth2')
 }
