@@ -1,4 +1,4 @@
 return {
-	OAuth = require('./libs/oauth'),
+	OAuth = nil,
 	OAuth2 = require('./libs/oauth2')
 }
