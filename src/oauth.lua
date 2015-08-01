@@ -1,11 +1,9 @@
 local Object = require('core').Object
-local crypto = require('_crypto')
+--local crypto = require('_crypto')
 local http = require('http')
 local https = require('https')
 local qs = require('querystring')
 local URL = require('url')
-local table = require('table')
-local string = require('string')
 
 -- helper functions
 local h = require('./_helpers')

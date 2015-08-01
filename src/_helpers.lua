@@ -1,9 +1,4 @@
-local string = require('string')
-local math = require('math')
-local table = require('table')
-local crypto = require('_crypto')
-local os = require('os')
-local qs = require('luvit-querystring')
+local qs = require('querystring')
 
 local exports = {}
 
