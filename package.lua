@@ -1,18 +1,23 @@
--- for older versions of luvit and alternative package managers
 return {
-	name = "luvit-oauth",
-	version = "0.1.5",
-	description = "OAuth wrapper for luvit.io",
-	repository = {
-		url = "https://github.com/luvitrocks/luvit-oauth.git",
-	},
+	name = "squeek502/oauth",
+	version = "0.2.0",
+	description = "OAuth wrapper for Luvit",
+	keywords = {"oauth", "oauth2"},
+	homepage = "https://github.com/squeek502/luvit-oauth",
+	license = "MIT",
 	author = {
 		name = "Dmitri Voronianski",
 		email = "dmitri.voronianski@gmail.com"
 	},
-	licenses = {"MIT"},
-	dependencies = {
-		"luvit-querystring"
+	contributors = {
+		"Ryan Liptak",
 	},
-	main = 'init.lua'
+	dependencies = {
+		"luvit/luvit@2.4.0",
+		"luvit/http@1.2.1",
+	},
+	files = {
+		"!tests",
+		"**.lua"
+	}
 }
