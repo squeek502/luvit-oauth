@@ -38,7 +38,7 @@ end
 function OAuth:getAuthorizeUrl (params)
 	params = params or {}
 	params['client_id'] = self.clientID
-	return self.baseSite .. self.authorizeUrl .. '?' .. h.stringify(params)
+	return self.baseSite .. self.authorizeUrl .. '?' .. qs.stringify(params)
 end
 
 function OAuth:_getAccessTokenUrl ()
@@ -55,7 +55,7 @@ function OAuth:getOAuthAccessToken (code, params, callback)
 
 	opts = {
 		method = 'POST',
-		post_body = h.stringify(params)
+		post_body = qs.stringify(params)
 	}
 
 	self:request(self:_getAccessTokenUrl(), opts, function (err, data, resp)
@@ -124,7 +124,7 @@ function OAuth:request (url, opts, callback)
 		parsedURL.query[self.accessTokenName] = opts.access_token
 	end
 
-	local queryString = h.stringify(parsedURL.query)
+	local queryString = qs.stringify(parsedURL.query)
 	if queryString ~= '' then queryString =  '?' .. queryString end
 
 	local path = parsedURL.pathname .. queryString
