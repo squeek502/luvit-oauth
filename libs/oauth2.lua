@@ -89,7 +89,7 @@ function OAuth:request (url, opts, callback)
 
 	opts = opts or {}
 
-	local parsedURL = URL.parse(url)
+	local parsedURL = URL.parse(url, true)
 	if parsedURL.protocol == 'http' and not parsedURL.port then parsedURL.port = 80 end
 	if parsedURL.protocol == 'https' and not parsedURL.port then parsedURL.port = 443 end
 
